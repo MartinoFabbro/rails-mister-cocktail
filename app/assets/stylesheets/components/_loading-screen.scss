@@ -1,0 +1,20 @@
+ @import url('https://fonts.googleapis.com/css?family=Germania+One&display=swap');
+
+.main-wrapper{
+  background-color: red;
+  text-align: center;
+  padding: 0px 66vh;
+}
+
+.loading-screen {
+  width: 700px;
+  padding: auto;
+  margin-top: 100px;
+  background-color: red;
+  vertical-align: center;
+  p {
+    font-family: 'Germania One', cursive;
+    text-align: center;
+    font-size: 85px;
+  }
+}

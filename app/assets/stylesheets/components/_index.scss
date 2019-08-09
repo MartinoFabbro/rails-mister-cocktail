@@ -1,0 +1,16 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "navbar";
+@import "loading-screen";
+@import "shared-header";
+@import "cocktail-cards";
+
+$red: #FD1015;
+
+
+.add-a-cocktail{
+  margin-top: 30px;
+  font-size: 100px;
+  text-align: center;
+}

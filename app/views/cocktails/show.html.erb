@@ -1,0 +1,18 @@
+<h2><%= @cocktail.name %></h2>
+
+<br>
+<% @cocktail.doses.each do |review|%>
+<li><%= review.ingredient.name %></li>
+<li><%= review.description  %></li>
+<li><%= link_to "💀", dose_path(review), method: :delete, data: {confirm: "Are you sure?"}%></li>
+
+<% end %>
+
+
+<%= render 'shared/form', dose: @dose, cocktail: @cocktail %>
+
+<a><%= link_to "Add an Ingredient", new_cocktail_dose_path(@cocktail) %></a>
+<a><%= link_to "Go Back", cocktails_path %></a>
+
+
+

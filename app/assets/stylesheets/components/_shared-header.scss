@@ -1,0 +1,11 @@
+.shared-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  background-color: $red;
+  font-size: 40px;
+  margin-bottom: 30px;
+  i {
+      color: white;
+  }
+}

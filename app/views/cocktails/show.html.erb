@@ -1,4 +1,19 @@
-<h2><%= @cocktail.name %></h2>
+<% if @cocktail.photo? %>
+  <div class="card"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+  <div class="card-category">Popular</div>
+    <div class="card-description">
+            <h2>Some stuff</h2>
+            <p>Very cool stuff, useful and smart</p>
+          </div>
+          <a class="card-link" href="#" ></a>
+</div>
+  <% else %>
+      <h2 style="color: red"><%= @cocktail.name %></h2>
+  <% end %>
+
+
 
 <br>
 <% @cocktail.doses.each do |review|%>
@@ -8,11 +23,9 @@
 
 <% end %>
 
-
 <%= render 'shared/form', dose: @dose, cocktail: @cocktail %>
 
 <a><%= link_to "Add an Ingredient", new_cocktail_dose_path(@cocktail) %></a>
 <a><%= link_to "Go Back", cocktails_path %></a>
-
 
 
